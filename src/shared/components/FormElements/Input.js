@@ -47,7 +47,12 @@ const Input = (props) => {
   const { value, isValid } = inputState;
 
   useEffect(() => {
-    props.onInput();
+    debugger;
+    props.onInput({
+      id,
+      value,
+      isValid,
+    });
   }, [id, value, isValid, onInput]);
 
   const element =
